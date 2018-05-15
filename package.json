@@ -1,0 +1,58 @@
+{
+  "name": "isomorphic-dom",
+  "version": "0.0.1",
+  "description": "Isomorphic DOM with browser and NodeJS support",
+  "homepage": "https://isomorphic-dom.codejam.ninja",
+  "bugs": {
+    "url": "https://github.com/codejamninja/isomorphic-dom/issues",
+    "email": "jam@codejam.ninja"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Jam Risser",
+    "email": "jam@codejam.ninja",
+    "url": "https://codejam.ninja"
+  },
+  "main": "lib",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codejamninja/isomorphic-dom"
+  },
+  "scripts": {
+    "build": "npm run test && babel src -d lib",
+    "lint": "eslint ./",
+    "lint:fix": "eslint --fix ./",
+    "prepublish": "npm run build",
+    "test": "npm run lint"
+  },
+  "dependencies": {
+    "jsdom": "^11.10.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.9.0"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "eslintIgnore": ["lib"],
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": "4"
+          }
+        }
+      ],
+      "stage-2"
+    ]
+  }
+}
